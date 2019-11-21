@@ -1,18 +1,26 @@
+# Long Nguyen 1001247753
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 def findPCA(points) :
     """  student fills this in
     """
     
-    mean = np.array([np.mean(points, axis=0), np.mean(points, axis=1)])
+    mean = np.mean(points, axis=0)
     
-    print(mean)
-    shiftedPoints = [points - mean]
+    shiftedPoints = points - mean
     
-    covMatrix = np.zeros((2,2))
+    covMatrix = shiftedPoints.transpose().dot(shiftedPoints)
     
-    fpc = np.zeros((2, 1))
+    eigenvalues, eigenvectors = np.linalg.eig(covMatrix)
+    
+    indices = abs(eigenvalues).argsort()[::-1]
+    
+    eigenvalues = abs(eigenvalues)[indices]
+    eigenvectors = abs(eigenvectors)[:, indices]
+    
+    fpc = eigenvectors[0]
     
     return [shiftedPoints, covMatrix, fpc]
 

@@ -9,6 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
+            "cwd": "${workspaceFolder}/Homeworks/nguyen7753-hw10/",
             "console": "integratedTerminal"
         }
     ]

@@ -1,0 +1,12 @@
+singular values
+[9.10518026 3.19683128 2.57174506 2.29392448]
+
+effective rank = 3 when tolerance is 2.5
+
+Estimates
+    laundry = 258.2 gallons
+ dishwasher = -121.3 gallons
+     shower = 110.2 gallons
+ sprinklers = 121.8 gallons
+
+the norm of the residual is 1715.9
